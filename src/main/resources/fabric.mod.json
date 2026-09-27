@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "hotbarbuttons",
+	"version": "${version}",
+	"name": "HotbarButtons",
+	"description": "This mod allows you to use your hotbar like you would on a controller in Bedrock Edition.",
+	"authors": [
+		"JaviLine"
+	],
+	"contact": {
+		"homepage": "youtube.com/@javilinexd"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hotbarbuttons/Hotbar Buttons.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.javiline.HotbarButtons"
+		],
+		"client": [
+			"me.javiline.client.HotbarButtonsClient"
+		]
+	},
+	"mixins": [
+		"hotbarbuttons.mixins.json",
+		{
+			"config": "hotbarbuttons.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
